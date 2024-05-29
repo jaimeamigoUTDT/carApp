@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Responsable {
-  Responsable({required this.name, required this.color});
+class Usuario {
+  Usuario({required this.name, required this.color});
 
   final String name;
   final Color color;

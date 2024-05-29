@@ -1,7 +1,16 @@
+import 'package:car_app/app/models/reminder.dart';
+import 'package:car_app/app/models/usuario.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DoubleInput extends StatelessWidget {
-  const DoubleInput({super.key});
+  DoubleInput(this.input1, this.input2, {super.key});
+
+  final String input1;
+  final String input2;
+
+  final controller =
+      Get.put(_DoubleInputController()); // Initialize the controller
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +21,12 @@ class DoubleInput extends StatelessWidget {
       ),
       width: double.infinity,
       padding: const EdgeInsets.only(left: 18),
-      child: const Column(
+      child: Column(
         children: [
           TextField(
             decoration: InputDecoration(
-              hintText: 'Título',
-              hintStyle: TextStyle(
+              hintText: input1,
+              hintStyle: const TextStyle(
                 color: Color(0xFFC1C1C1),
                 fontFamily: 'SFPRODISPLAY',
                 fontSize: 16,
@@ -26,15 +35,14 @@ class DoubleInput extends StatelessWidget {
               border: InputBorder.none,
             ),
           ),
-          Divider(
+          const Divider(
             color: Color(0xFFD6D6D6), // Color of the divider line
             thickness: 1,
-            indent: 18,
           ),
           TextField(
             decoration: InputDecoration(
-              hintText: 'Fecha',
-              hintStyle: TextStyle(
+              hintText: input2,
+              hintStyle: const TextStyle(
                 color: Color(0xFFC1C1C1),
                 fontFamily: 'SFPRODISPLAY',
                 fontSize: 16,
@@ -45,6 +53,26 @@ class DoubleInput extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _DoubleInputController extends GetxController {
+  late final String title;
+  late final String date;
+  late final Usuario responsable;
+  late final String direccion;
+  late final String notas;
+
+
+  Reminder newTask(String titulo, String fecha, Usuario responsable,
+      String direccion, notas) {
+    return Reminder(
+      title: titulo,
+      dateString: fecha,
+      responsible: responsable,
+      direccion: direccion,
+      notas: notas,
     );
   }
 }

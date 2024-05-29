@@ -1,6 +1,6 @@
-import 'package:car_app/app/components/Heading.dart';
-import 'package:car_app/app/components/NewButton.dart';
-import 'package:car_app/app/components/SingleReminder.dart';
+import 'package:car_app/app/components/fontStyles/Heading.dart';
+import 'package:car_app/app/components/buttons/NewButton.dart';
+import 'package:car_app/app/components/cards/SingleReminder.dart';
 import 'package:car_app/app/models/reminder.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +33,7 @@ class Recordatorios extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const NewButton(),
+            NewButton(),
           ],
         ),
       ),

@@ -1,5 +1,5 @@
-import 'package:car_app/app/components/BodyText.dart';
-import 'package:car_app/app/models/responsable.dart';
+import 'package:car_app/app/components/fontStyles/BodyText.dart';
+import 'package:car_app/app/models/usuario.dart';
 import 'package:flutter/material.dart';
 
 class SingleReminder extends StatelessWidget {
@@ -11,7 +11,7 @@ class SingleReminder extends StatelessWidget {
 
   final String title;
   final String date;
-  final Responsable responsible;
+  final Usuario responsible;
 
   @override
   Widget build(BuildContext context) {

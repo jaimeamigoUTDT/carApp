@@ -1,5 +1,5 @@
-import 'package:car_app/app/components/Heading.dart';
-import 'package:car_app/app/components/SubHeading.dart';
+import 'package:car_app/app/components/fontStyles/Heading.dart';
+import 'package:car_app/app/components/fontStyles/SubHeading.dart';
 import 'package:flutter/material.dart';
 
 class CarContainer extends StatelessWidget {

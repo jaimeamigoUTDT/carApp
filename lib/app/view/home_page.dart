@@ -1,6 +1,6 @@
-import 'package:car_app/app/components/CarContainer.dart';
-import 'package:car_app/app/components/Heading.dart';
-import 'package:car_app/app/components/Recordatorios.dart';
+import 'package:car_app/app/components/cards/CarContainer.dart';
+import 'package:car_app/app/components/fontStyles/Heading.dart';
+import 'package:car_app/app/components/cards/Recordatorios.dart';
 import 'package:car_app/app/controllers/home_page_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +27,7 @@ class HomePage extends GetView<HomePageController> {
               const SizedBox(
                 height: 20,
               ),
-              Recordatorios(controller.recordatorios),
+              Recordatorios(controller.test_events),
             ],
           ),
         ),
